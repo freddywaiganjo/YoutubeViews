@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,7 +35,7 @@ public class Youtube {
         System.out.println("URL::: "+baseUrl+exactVd);
         System.out.println("Thread_ID:: "+Thread.currentThread().getId());
 //        don't worry about the xpath. it works
-        WebElement Play = driver.findElement(By.xpath("//*[@id=\"movie_player\"]/div[22]/div[2]/div[1]/button"));
+        WebElement Play = driver.findElement(By.cssSelector("button[class='ytp-play-button ytp-button']"));
         Play.click();
 //      Sleep time equals the length of your video
         Thread.sleep(30000);

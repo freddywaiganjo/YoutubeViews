@@ -18,7 +18,7 @@ public final class LoopThru {
     public static TestSuite suite(){
         TestSuite suite = new TestSuite();
 //        i is the no. of views you would like to add. Be keen to avoid exhausting memory heap
-        for (int i= 0; i<100; i++) {
+        for (int i= 0; i<1000; i++) {
             suite.addTest(new JUnit4TestAdapter(Youtube.class));
         }
 
